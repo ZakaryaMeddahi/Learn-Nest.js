@@ -51,14 +51,14 @@ export class NinjasService {
   }
 
   updateNinja(id: string, updateNinjaDto: UpdateNinjaDto) {
-    const ninja = this.getSingleNinja(id);
+    const ninja = this.getSingleNinja(+id);
     const index = this.ninjas.indexOf(ninja);
     this.ninjas[index] = { ...ninja, ...updateNinjaDto };
     return this.ninjas[index];
   }
 
   deleteNinja(id: string) {
-    const ninja = this.getSingleNinja(id);
+    const ninja = this.getSingleNinja(+id);
     const index = this.ninjas.indexOf(ninja);
     this.ninjas.splice(index, 1);
     return `The ninja with id: ${id} has been deleted successfully`;

@@ -25,7 +25,7 @@ import { BeltGuard } from 'src/belt/belt.guard';
 
 @Controller('ninjas')
 // We Can Use The Guard In The Controller Or In A Specified Route
-@UseGuards(BeltGuard)
+// @UseGuards(BeltGuard)
 export class NinjasController {
   // Instead Of Instantiating A New NinjasService Object Inside Every Method
   // We Can Do It Only One Time In The Controller
